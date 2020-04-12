@@ -118,6 +118,9 @@ Wireframes:
 https://github.com/thinkful-ei-macaw/foodversity-wireframes-dasha
 
 loading page: index.html
+
 signup/log in page: sign up.html
+
 main app page: main.html
+
 add/edit form: add-food-form.html
