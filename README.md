@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). FOR USER STORIES AND APP FLOW, SEE BELOW
 
 ## Available Scripts
 
@@ -66,3 +66,58 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### What is this all about??
+
+App flow: https://docs.google.com/drawings/d/1whdfrOJibZVpIOiluUBYOeNEtFzqpsBkfLRUf-vnieQ/edit?usp=sharing
+
+MVP:
+User stories by priority:
+
+1. Have to view start screen
+2. Have to login/sign-up/ or view demo
+3. Have to view main page with previously entered info
+4. Have to be able to add items
+5. Have to be able to delete items
+
+Secondary priority/optional:
+
+Expanded view
+Edit existing entry
+filter by ingredient
+
+
+Users (who are they):
+- people who don't want to eat the same thing every day
+- Planners who like taking the mystery out of meal planning and have everything set up for the week
+- People who like variety and diversity in their meals
+
+What this app does:
+- You can add your favourite meals to the journal for every day of the week
+- Add ingredients you want to use, like chicken or pasta, and methods of preparation, so you can track what you ate and
+not eat the same thing every day
+- Create meals for breakfast, lunch, dinner, and snacks
+- Edit the already added meals and change things around
+- Able to compile a week long meal plan, making sure you don't run out of ingredients
+
+New Users:
+- Can sign up for an account
+- create meals journals
+- immediately start adding meals
+- edit what they have just added
+
+existing users:
+- Can sign in
+- view existing meal journal with their entries
+- Edit what they have previously entered
+- Add new meals for all the days of the week
+
+
+Wireframes:
+https://github.com/thinkful-ei-macaw/foodversity-wireframes-dasha
+
+loading page: index.html
+signup/log in page: sign up.html
+main app page: main.html
+add/edit form: add-food-form.html
