@@ -1,45 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './StartScreen.css';
-import JournalMain from '../JournalMain/JournalMain';
-
-const URL = `http://localhost:8000/`;
-
-class StartScreen extends Component {
 
 
-handleStartScreen = () =>{
-    fetch(`${URL}` )
-    .then ((res) => {
-        return res.json();
-    })
-    .then((data) => {
-        console.log(JSON.stringify(data))
-    })
-}
-
-handleStartClick (e) {
-    e.preventDefault();
-    console.log('start button clicked')
-    
-
-}
-
-
-
-    render(){
+function StartScreen (props) {
     return (
         <div className = 'StartScreen'>
         <h1>
             
        foodversity
      </h1>
-     <p>stop creepin... there's nothing here yet </p>
-     <button id='start' onClick={this.handleStartClick}>Start</button>
-     {/* onClick send me to the the JournalMain */}
+     <p>a food journal for the uber-organised </p>
+     <button id='start' onClick={e => props.history.replace("/login")}>Start</button>
      </div>
     )
 }
-}
+
 
 export default StartScreen;
 

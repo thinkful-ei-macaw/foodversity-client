@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 
 import './App.css';
@@ -9,8 +9,32 @@ import AddForm from './AddForm/AddForm';
 
 
 
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      food: {}
+    };
+  }
 
-function App() {
+  handleStartScreen = (e) =>{
+    e.preventDefault();
+    const baseUrl = 'http://localhost:8000/';
+
+    fetch(`${baseUrl}` )
+    .then ((res) => {
+      if (!res.ok){
+        throw new Error(res.statusText);
+      }
+        return res.json();
+    })
+    .then((data) => {
+        console.log(JSON.stringify(data))
+    })
+}
+
+
+  render (){
   return (
     <div className="App">
       <Route exact path='/' component={StartScreen}/>
@@ -20,6 +44,7 @@ function App() {
      
     </div>
   );
+}
 }
 
 // renderMainRoutes(){

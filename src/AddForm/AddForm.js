@@ -1,10 +1,12 @@
 import React from 'react';
 import './AddForm.css'
 
-//POST method htmlFor new items entered and added into form
+//POST method For new items entered and added into form
 //server side should have the post method as well
 
-function AddForm() {
+//addform should have a drop down for day and meal, to easily add to the right days table
+
+function AddForm(props) {
 return(
     <div className='AddForm'>
             <h3>add food journal entry</h3>
@@ -19,41 +21,9 @@ return(
             <label htmlFor="input-one">item 1</label>
                 <input className="form-control" type="text" name="first-item" id="first-item" placeholder="bread, etc" required />
                 <input className="btn btn--form" type="submit" value="add item" /></div>
-                {/* <section class="food-form">
-                <label htmlFor="input-two">item 2</label>
-                    <input class="form-control" type="text" name="first-item" id="second-item" placeholder="eggs, etc" required />
-                <input class="btn btn--form" type="submit" value="add item" /></section>
-                <section class="food-form">
-                    <label htmlFor="input-three">item 3</label>
+                <button id='addform' onClick={e => props.history.replace("/main")}>Add food</button>        
+                <button id='cancel add' onClick={e => props.history.replace("/main")}>nevermind...</button>
 
-                <input class="form-control" type="text" name="first-item" id="third-item" placeholder="juice, etc" required />
-                <input class="btn btn--form" type="submit" value="add item" /></section> */}
-                {/* <section class="food-form">
-                    <label htmlFor="input-four">item 4</label>
-
-                <input class="form-control" type="text" name="first-item" id="fourth-item" placeholder="vodka, etc" required />
-                <input class="btn btn--form" type="submit" value="add item" />
-                </section>
-                <section class="food-form">
-
-                <label htmlFor="input-five">item 5</label>
-
-                <input class="form-control" type="text" name="first-item" id="fitth-item" placeholder="apple, etc" required />
-                <input class="btn btn--form" type="submit" value="add item" /></section>
-                
-                <a class="more-fields" href="#">show more fields (this will add more fields below)</a>
-<br />
-                <button class='submit' type="submit">SUBMIT</button>
-
-                 */}
-                {/* <label htmlFor="cars">Choose a food:</label>
-
-                <select id="items" multiple>
-                  <option value="option1">bread</option>
-                  <option value="option2">eggs</option>
-                  <option value="option3">juice</option>
-                  <option value="option4">vodka</option>
-                </select> */}
             </fieldset>
     </form>
     </div>

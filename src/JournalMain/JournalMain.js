@@ -3,9 +3,13 @@ import './JournalMain.css';
 
 //componentDidMount because the api needs to show the journal on start
 //do i need dummy data? helpers
-function JournalMain(){
+//handleSubmit w baseUrl
+function JournalMain(props){
+
+
     return (
         <div className='JournalMain'>
+            <button id='start' onClick={e => props.history.replace("/addform")}>Add All The Foods!</button>
 <h2>food journal</h2>
 <section id='monday'>
      <h3>monday</h3>
