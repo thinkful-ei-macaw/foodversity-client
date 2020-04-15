@@ -4,7 +4,7 @@ export const findDays = (days = [], daysId) =>
 export const findFood = (foods = [], foodId) =>
   foods.find((food) => food.id === foodId);
 
-export const getFoodsForDays = (foods = [], daysId) =>
+export const getFoodsForDay = (foods = [], daysId) =>
   !daysId ? foods : foods.filter((food) => food.days_id === Number(daysId));
 
 export const countfoodsFordays = (foods = [], daysId) =>
