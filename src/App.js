@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-
 import './App.css';
 import StartScreen from './StartScreen/StartScreen';
 import JournalMain from './JournalMain/JournalMain';
 import LoginForm from './LoginForm/LoginForm'
 import AddForm from './AddForm/AddForm';
 import FoodversityContext from './FoodversityContext';
+import config from "./config";
 
 
 
@@ -20,27 +20,50 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8000/days")
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        this.setState({
-          folders: data
-        });
-      });
+    Promise.all([
+      fetch(`${config.API_ENDPOINT}/days`),
+      fetch(`${config.API_ENDPOINT}/food`),
+    ])
+      .then(([daysRes, foodsRes]) => {
+        
+        if (!daysRes.ok) return daysRes.json().then((e) => Promise.reject(e));
+        if (!foodsRes.ok)
+          return foodsRes.json().then((e) => Promise.reject(e));
 
-    fetch("http://localhost:8000/food")
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        this.setState({
-          notes: data
-        });
+        return Promise.all([daysRes.json(), foodsRes.json()]);
+      })
+      .then(([days, foods]) => {
+        console.log(days);
+        this.setState({ days, foods });
+      })
+      .catch((error) => {
+        console.error({ error });
       });
-    }
+  }
+
+
+  // componentDidMount() {
+  //   fetch(`${config.API_ENDPOINT}/days`)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log(`${config.API_ENDPOINT}/days`)
+  //       this.setState({
+  //         foods: data
+  //       });
+  //     });
+
+  //   fetch(`${config.API_ENDPOINT}/food`)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log(data)
+  //       this.setState({
+  //         days: data
+  //       });
+  //     });
+  //   }
 
   //compononent did mount
-  //days first then notes
+  //days first then days
 
 
 
@@ -48,7 +71,7 @@ class App extends Component {
 
   handleStartScreen = (e) =>{
     e.preventDefault();
-    const baseUrl = 'http://localhost:8000/';
+    const baseUrl = `${config.API_ENDPOINT}/`;
 
     fetch(`${baseUrl}` )
     .then ((res) => {

@@ -26,7 +26,7 @@ render(){
      <h3>monday</h3>
     <ul id='monday'>
         <li>
-        
+        {/* map over the array from the fetch call in app */}
             breakfast: {this.context.days}
         </li>
         <li>
@@ -43,7 +43,7 @@ render(){
     
 </section>
 <section id='tuesday'>
-     tuesday
+     <h3>tuesday</h3>
     <ul id='tuesday'>
         <li>
             breakfast

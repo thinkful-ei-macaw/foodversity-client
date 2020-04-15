@@ -27,7 +27,7 @@ return(
             <select id="meal type" >
 >
   <option value="breakfast">breakfast</option>
-  <option value="luncj">lunch</option>
+  <option value="lunch">lunch</option>
   <option value="dinner">dinner</option>
   <option value="snacks">snacks</option>
 </select>
