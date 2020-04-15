@@ -27,16 +27,16 @@ render(){
     <ul id='monday'>
         <li>
         
-            breakfast: {this.context.food[0].content}
+            breakfast: {this.context.days}
         </li>
         <li>
-            lunch: {this.context.food[1].content}
+            lunch: 
         </li>
         <li>
-            dinner: {this.context.food[2].content}
+            dinner: 
         </li>
         <li>
-            snacks : {this.context.food[3].content}
+            snacks : 
         </li>
     </ul>
     <button id="delete" type="delete">Delete</button>

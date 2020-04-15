@@ -19,19 +19,25 @@ class App extends Component {
     };
   }
 
-    componentDidMount() {
-      fetch("http://localhost:8000/main")
-        .then(response => response.json())
-        .then(data => {
-          console.log(data)
-          this.setState({
-            food: data,
-          });
+  componentDidMount() {
+    fetch("http://localhost:8000/days")
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        this.setState({
+          folders: data
         });
-        
-      }
+      });
 
-
+    fetch("http://localhost:8000/food")
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        this.setState({
+          notes: data
+        });
+      });
+    }
 
   //compononent did mount
   //days first then notes
@@ -74,6 +80,7 @@ class App extends Component {
   );
 }
 }
+
 
 // renderMainRoutes(){
 //   const contextValue
