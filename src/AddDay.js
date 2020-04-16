@@ -7,14 +7,13 @@ class AddDay extends Component {
     history: {
       push: () => {},
     },
-  }
+  };
   static contextType = FoodversityContext;
 
   handleSubmit = (e) => {
-      
     e.preventDefault();
     const newDay = {
-      title: e.target.value
+      title: e.target.value,
     };
     fetch(`${config.API_ENDPOINT}/days`, {
       method: "POST",
@@ -38,18 +37,15 @@ class AddDay extends Component {
   };
 
   render() {
-
     return (
-        
       <section className="addDay">
         <h2>Add day</h2>
         <section onSubmit={this.handleSubmit}>
           <label htmlFor="day-name">what day is it</label>
-          <input type="text" name="food-day-id" id="food-day-id" required/>
+          <input type="text" name="food-day-id" id="food-day-id" required />
 
           <div className="button">
-            <button type="submit" onClick={this.handleSubmit}
-            >
+            <button type="submit" onClick={this.handleSubmit}>
               {" "}
               Add day
             </button>
