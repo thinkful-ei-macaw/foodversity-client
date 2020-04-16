@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import FoodversityContext from "./FoodversityContext";
 import config from "./config";
 
@@ -31,12 +30,12 @@ export default class Food extends React.Component {
   };
 
   render() {
-    const { name, id } = this.props;
+    const { name, id, days_id } = this.props;
     return (
       <div className="food">
-        <h2 className="food__title">
-          <Link to={`/food/${id}`}>{name}</Link>
-        </h2>
+        <p className="food__title" value={`/food/${id}`}>{name}{days_id}
+          
+        </p>
         <button
           className="food__delete"
           type="button"

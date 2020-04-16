@@ -96,7 +96,6 @@ class App extends Component {
   render() {
     const value = {
       days: this.state.days,
-      food: this.state.food,
       foods: this.state.foods,
       addDay: this.handleAddDay,
       addForm: this.handleAddFood,
