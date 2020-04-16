@@ -45,15 +45,16 @@ class AddForm extends Component {
     return (
       <section className="AddFood">
         <h2>add all the foods!</h2>
-        <FoodForm onSubmit={this.handleSubmit} days={days}>
-        
-        </FoodForm>
-        </section>
-
+        <FoodForm onSubmit={this.handleSubmit} days={days}></FoodForm>
+        <button
+          id="cancel add"
+          onClick={(e) => this.props.history.replace("/main")}
+        >
+          nevermind...
+        </button>
+      </section>
     );
   }
 }
 
 export default AddForm;
-
- 
