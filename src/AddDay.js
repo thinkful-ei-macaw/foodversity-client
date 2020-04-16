@@ -7,20 +7,21 @@ class AddDay extends Component {
     history: {
       push: () => {},
     },
-  };
+  }
   static contextType = FoodversityContext;
 
   handleSubmit = (e) => {
+      
     e.preventDefault();
-    const day = {
-      title: e.target["food-day-id"].value,
+    const newDay = {
+      title: e.target.value
     };
-    fetch(`${config.API_ENDPOINT}/day`, {
+    fetch(`${config.API_ENDPOINT}/days`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(day),
+      body: JSON.stringify(newDay),
     })
       .then((res) => {
         if (!res.ok) return res.json().then((e) => Promise.reject(e));
@@ -37,15 +38,18 @@ class AddDay extends Component {
   };
 
   render() {
+
     return (
+        
       <section className="addDay">
         <h2>Add day</h2>
         <section onSubmit={this.handleSubmit}>
           <label htmlFor="day-name">what day is it</label>
-          <input type="date" name="food-day-id" id="food-day-id" required/>
+          <input type="text" name="food-day-id" id="food-day-id" required/>
 
           <div className="button">
-            <button type="submit" onClick={this.handleSubmit}>
+            <button type="submit" onClick={this.handleSubmit}
+            >
               {" "}
               Add day
             </button>

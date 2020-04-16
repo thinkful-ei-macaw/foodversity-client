@@ -2,7 +2,6 @@ import React from "react";
 
 export default function FoodForm(props) {
   const { className, ...otherProps } = props;
-console.log(props)
   return (
     <form
       className={["food-form", className].join(" ")}
@@ -22,7 +21,7 @@ console.log(props)
           ))}
         </select>
         <label htmlFor="meal-type">what meal is it?</label>
-        <select id="meal type">
+        <select id="meal-type">
           ><option value="breakfast">breakfast</option>
           <option value="lunch">lunch</option>
           <option value="dinner">dinner</option>
@@ -39,6 +38,7 @@ console.log(props)
             placeholder="bread, etc"
           />
           <input className="btn btn--form" type="submit" value="add item" />
+          {/* append to add more fields? */}
         </div>
         <label htmlFor="url">Link to recipe</label>
         <input
