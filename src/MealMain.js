@@ -30,10 +30,11 @@ export default class foodPageMain extends React.Component {
         >
           Add All The Foods!
         </button>
+        <button id='dayAdd' onClick={(e) => this.props.history.replace('/add-day')}>What Day is it</button>
         <h2>food journal</h2>
         <h3>monday</h3>
         <ul>
-          breakfast:
+          breakfast: 
           {foodsForDay.map((food) => (
             <li key={food.id}>
               <Food id={food.id} name={food.content} />

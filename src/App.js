@@ -8,6 +8,7 @@ import LoginForm from "./LoginForm/LoginForm";
 import AddForm from "./AddForm/AddForm";
 import FoodversityContext from "./FoodversityContext";
 import config from "./config";
+import AddDay from './AddDay';
 
 class App extends Component {
   state = {
@@ -95,6 +96,9 @@ class App extends Component {
     const value = {
       days: this.state.days,
       food: this.state.food,
+      addDay: this.handleAddDay,
+      addForm: this.handleAddFood,
+      deleteFood: this.handleDeleteFood,
     };
     return (
       <FoodversityContext.Provider value={value}>
@@ -103,6 +107,7 @@ class App extends Component {
           <Route exact path="/main" component={MealMain} />
           <Route exact path="/login" component={LoginForm} />
           <Route exact path="/addform" component={AddForm} />
+          <Route path='/add-day' component={AddDay} />
         </div>
       </FoodversityContext.Provider>
     );
