@@ -1,8 +1,8 @@
 import React from "react";
 
 export default function FoodForm(props) {
-  const { className, days = [], ...otherProps } = props;
-
+  const { className, ...otherProps } = props;
+console.log(props)
   return (
     <form
       className={["food-form", className].join(" ")}
@@ -11,7 +11,7 @@ export default function FoodForm(props) {
       onSubmit={props.onSubmit}
     >
       <fieldset>
-        <label htmlFor="day-select" name="food-day-id">
+        <label htmlFor="day-name" name="food-day-id">
           what day is it?
         </label>
         <select id="food-day-select" name="food-day-id">

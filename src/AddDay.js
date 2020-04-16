@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import FoodForm from "./FoodForm";
 import FoodversityContext from "./FoodversityContext";
 import config from "./config";
 
@@ -38,13 +37,12 @@ class AddDay extends Component {
   };
 
   render() {
-    console.log("hello");
     return (
       <section className="addDay">
         <h2>Add day</h2>
-        <FoodForm onSubmit={this.handleSubmit}>
+        <section onSubmit={this.handleSubmit}>
           <label htmlFor="day-name">what day is it</label>
-          <input type="date" name="food-day-id" id="food-day-select" />
+          <input type="date" name="food-day-id" id="food-day-id" required/>
 
           <div className="button">
             <button type="submit" onClick={this.handleSubmit}>
@@ -58,7 +56,7 @@ class AddDay extends Component {
               nevermind...
             </button>
           </div>
-        </FoodForm>
+        </section>
       </section>
     );
   }
