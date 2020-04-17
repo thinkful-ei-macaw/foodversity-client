@@ -2,5 +2,40 @@
   text-align: center;
 }
 
+ul.calendar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.calendar > li {
+  width: 14%;
+  max-width: 150px;
+  margin: 0;
+  border: 1px solid black;
+  word-break: break-all;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 150px;
+  text-align: left;
+}
+
+h3.day__title {
+  margin-top: 0;
+}
+
+.day__title a {
+  text-decoration: none;
+  color: blue;
+}
+
+.day ul {
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.day li {
+  margin: 5px 0;
+}
 
 

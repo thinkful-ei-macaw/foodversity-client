@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
 import StartScreen from "./StartScreen/StartScreen";
-// import JournalMain from "./JournalMain/JournalMain";
 import MealMain from "./MealMain";
 import LoginForm from "./LoginForm/LoginForm";
 import AddForm from "./AddForm/AddForm";
@@ -37,46 +36,7 @@ class App extends Component {
       });
   }
 
-  // componentDidMount() {
-  //   fetch(`${config.API_ENDPOINT}/days`)
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log(`${config.API_ENDPOINT}/days`)
-  //       this.setState({
-  //         foods: data
-  //       });
-  //     });
-
-  //   fetch(`${config.API_ENDPOINT}/food`)
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log(data)
-  //       this.setState({
-  //         days: data
-  //       });
-  //     });
-  //   }
-
-  //compononent did mount
-  //days first then days
-
-  //post method
-
-  // handleStartScreen = (e) =>{
-  //   e.preventDefault();
-  //   const baseUrl = `${config.API_ENDPOINT}/`;
-
-  //   fetch(`${baseUrl}` )
-  //   .then ((res) => {
-  //     if (!res.ok){
-  //       throw new Error(res.statusText);
-  //     }
-  //       return res.json();
-  //   })
-  //   .then((data) => {
-  //       console.log(JSON.stringify(data))
-  //   })
-  // }
+  
   handleAddDay = (day) => {
     this.setState({
       days: [...this.state.days, day],
@@ -115,9 +75,6 @@ class App extends Component {
   }
 }
 
-// renderMainRoutes(){
-//   const contextValue
-//   }
 
 export default App;
 

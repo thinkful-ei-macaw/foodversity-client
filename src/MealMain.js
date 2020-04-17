@@ -3,6 +3,7 @@ import Days from './Days'
 import Food from "./Food";
 import FoodversityContext from "./FoodversityContext";
 import { getFoodsForDay } from "./food-helpers";
+import {Link} from 'react-router-dom'
 import "./JournalMain.css";
 
 export default class foodPageMain extends React.Component {
@@ -18,35 +19,29 @@ export default class foodPageMain extends React.Component {
   };
 
   render() {
-    const { dayId } = this.props.match.params;
     const { foods = [] } = this.context;
     const { days = [] }= this.context;
-    const foodsForDay = getFoodsForDay(foods, dayId);
+   
     return (
       <section className="JournalMain">
-        <button
+        <Link
           id="start"
-          onClick={(e) => this.props.history.replace("/addform")}
+          to="/addform"
         >
           Add All The Foods!
-        </button>
-        <button
+        </Link>
+        <Link
           id="dayAdd"
-          onClick={(e) => this.props.history.replace("/add-day")}
+          to={"/add-day"}
         >
           What Day is it
-        </button>
+        </Link>
         <h2>food journal</h2>
-        <h3>monday        </h3>
 
-        <ul>
-          breakfast:
-          {foodsForDay.map((food) => (
-            <li key={food.id}>
-              <Days id={days.id} name={days.title} />
-              <Food id={food.id} name={food.content} day={food.days_id}/>
-
-              
+        <ul className="calendar">
+          {days.map((day) => (
+            <li key={day.id}>
+              <Days {...day} />
             </li>
           ))}
         </ul>
