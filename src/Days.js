@@ -7,6 +7,8 @@ export default class Days extends React.Component {
   };
   static contextType = FoodversityContext;
 
+  
+
   render() {
     const {id,title} = this.props;
     const {foods} = this.context;
@@ -20,6 +22,7 @@ export default class Days extends React.Component {
         <ul>
               {foods.filter(f=>f.days_id===parseInt(id)).map(f=><li key={f.id}>{f.content}</li>)}
           </ul>
+         
       </div>
     );
   }

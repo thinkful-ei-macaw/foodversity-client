@@ -16,7 +16,8 @@ class AddForm extends Component {
     e.preventDefault();
     const newFood = {
       content: e.target["first-item"].value,
-      day_id: e.target["food-day-id"].value,
+      days_id: e.target["food-day-id"].value,
+      meal_type: e.target["meal-type"].value,
     };
     fetch(`${config.API_ENDPOINT}/food`, {
       method: "POST",
@@ -31,7 +32,7 @@ class AddForm extends Component {
       })
       .then((food) => {
         this.context.addForm(food);
-        this.props.history.push(`/day/${food.dayId}`);
+        this.props.history.push(`/main`);
       })
 
       .catch((error) => {

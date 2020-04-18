@@ -1,5 +1,6 @@
 import React from 'react';
 import './StartScreen.css';
+import { Link } from 'react-router-dom';
 
 
 function StartScreen (props) {
@@ -10,7 +11,13 @@ function StartScreen (props) {
        foodversity
      </h1>
      <p>a food journal for the uber-organised </p>
-     <button id='start' onClick={e => props.history.replace("/login")}>Start</button>
+     <Link id='start' to='/login'>
+         <button type='button'>Start</button>
+     </Link>
+     <Link id='info' to='/info'>
+         <button type='button'>Info</button>
+     </Link>
+     
      </div>
     )
 }

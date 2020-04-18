@@ -10,7 +10,7 @@ ul.calendar {
 
 .calendar > li {
   width: 14%;
-  max-width: 150px;
+  min-width: 150px;
   margin: 0;
   border: 1px solid black;
   word-break: break-all;

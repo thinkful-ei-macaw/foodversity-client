@@ -28,7 +28,7 @@ class AddDay extends Component {
       })
       .then((day) => {
         this.context.addDay(day);
-        this.props.history.push(`/days/${day.id}`);
+        this.props.history.push(`/main`);
       })
 
       .catch((error) => {
@@ -42,7 +42,7 @@ class AddDay extends Component {
         <h2>Add day</h2>
         <section onSubmit={this.handleSubmit}>
           <label htmlFor="day-name">what day is it</label>
-          <input type="text" name="food-day-id" id="food-day-id" required />
+          <input type="text" name="title" id="food-day-id" required />
 
           <div className="button">
             <button type="submit" onClick={this.handleSubmit}>

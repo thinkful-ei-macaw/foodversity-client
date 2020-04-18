@@ -1,12 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import Days from './Days'
-import Food from "./Food";
 import FoodversityContext from "./FoodversityContext";
-import { getFoodsForDay } from "./food-helpers";
 import {Link} from 'react-router-dom'
 import "./JournalMain.css";
 
-export default class foodPageMain extends React.Component {
+
+export default class MealMain extends Component {
   static defaultProps = {
     match: {
       params: {},
@@ -14,8 +13,10 @@ export default class foodPageMain extends React.Component {
   };
   static contextType = FoodversityContext;
 
+
   handleDeleteFood = (foodId) => {
-    this.props.history.push(`/`);
+    console.log(foodId)
+    this.props.history.push(`/main}`);
   };
 
   render() {
@@ -24,17 +25,19 @@ export default class foodPageMain extends React.Component {
    
     return (
       <section className="JournalMain">
-        <Link
+        <Link 
           id="start"
           to="/addform"
-        >
+        ><button type='button'>
           Add All The Foods!
+          </button>
         </Link>
         <Link
           id="dayAdd"
           to={"/add-day"}
-        >
+        ><button type='button'>
           What Day is it
+          </button>
         </Link>
         <h2>food journal</h2>
 
@@ -42,11 +45,12 @@ export default class foodPageMain extends React.Component {
           {days.map((day) => (
             <li key={day.id}>
               <Days {...day} />
+           
+                      <button type='delete' onClick={this.handleDeleteFood}>delete</button>
             </li>
           ))}
+
         </ul>
-<div className ='days-main' value={days}>
-</div>
        
       </section>
     );
