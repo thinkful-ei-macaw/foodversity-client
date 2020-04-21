@@ -1,0 +1,9 @@
+fieldset {
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 50px;
+    border-style: double;
+    opacity: .7;
+    background-image: url('/public/images/tomatoes-red-salad-food-fresh-vegetable-healthy-vitamins-nutrition.jpg');
+}

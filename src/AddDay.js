@@ -13,7 +13,7 @@ class AddDay extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const newDay = {
-      title: e.target.value,
+      title: e.target.title.value,
     };
     fetch(`${config.API_ENDPOINT}/days`, {
       method: "POST",
@@ -40,13 +40,13 @@ class AddDay extends Component {
     return (
       <section className="addDay">
         <h2>Add day</h2>
-        <section onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
+          <fieldset>
           <label htmlFor="day-name">what day is it</label>
-          <input type="text" name="title" id="food-day-id" required />
+          <input type="date" name="title" id="food-day-id" required />
 
           <div className="button">
-            <button type="submit" onClick={this.handleSubmit}>
-              {" "}
+            <button type="submit" >
               Add day
             </button>
             <button
@@ -56,7 +56,8 @@ class AddDay extends Component {
               nevermind...
             </button>
           </div>
-        </section>
+          </fieldset>
+        </form>
       </section>
     );
   }

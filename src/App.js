@@ -8,7 +8,7 @@ import AddForm from "./AddForm/AddForm";
 import FoodversityContext from "./FoodversityContext";
 import config from "./config";
 import AddDay from "./AddDay";
-import Info from './Info';
+import Info from "./Info";
 
 class App extends Component {
   state = {
@@ -37,12 +37,17 @@ class App extends Component {
       });
   }
 
-  
   handleAddDay = (day) => {
     this.setState({
       days: [...this.state.days, day],
     });
   };
+  handleDeleteDay = (dayID) => {
+    this.setState({
+      days: this.state.days.filter((d) => d.id !== dayID),
+    });
+  };
+
   handleAddFood = (food) => {
     this.setState({
       foods: [...this.state.foods, food],
@@ -59,6 +64,7 @@ class App extends Component {
       days: this.state.days,
       foods: this.state.foods,
       addDay: this.handleAddDay,
+      deleteDay: this.handleDeleteDay,
       addForm: this.handleAddFood,
       deleteFood: this.handleDeleteFood,
     };
@@ -76,7 +82,6 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;
 

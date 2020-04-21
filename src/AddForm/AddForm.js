@@ -18,6 +18,10 @@ class AddForm extends Component {
       content: e.target["first-item"].value,
       days_id: e.target["food-day-id"].value,
       meal_type: e.target["meal-type"].value,
+      first_item: e.target["first-item"].value,
+      second_item: e.target["second-item"].value,
+      third_item: e.target["third-item"].value,
+      url: e.target["url"].value,
     };
     fetch(`${config.API_ENDPOINT}/food`, {
       method: "POST",

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Days from './Days'
+import Days from "./Days";
 import FoodversityContext from "./FoodversityContext";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import "./JournalMain.css";
-
+import config from "./config";
 
 export default class MealMain extends Component {
   static defaultProps = {
@@ -13,31 +13,30 @@ export default class MealMain extends Component {
   };
   static contextType = FoodversityContext;
 
-
-  handleDeleteFood = (foodId) => {
-    console.log(foodId)
-    this.props.history.push(`/main}`);
+  handleDeleteFood = (id) => {
+    console.log("delete");
+    fetch(`${config.API_ENDPOINT}/days/${id}`, {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+      },
+    }).then(() => {
+      this.context.deleteDay(id);
+    });
+    //this.props.history.push(`/main`);
   };
 
   render() {
     const { foods = [] } = this.context;
-    const { days = [] }= this.context;
-   
+    const { days = [] } = this.context;
+
     return (
       <section className="JournalMain">
-        <Link 
-          id="start"
-          to="/addform"
-        ><button type='button'>
-          Add All The Foods!
-          </button>
+        <Link id="start" to="/addform">
+          <button type="button">Add All The Foods!</button>
         </Link>
-        <Link
-          id="dayAdd"
-          to={"/add-day"}
-        ><button type='button'>
-          What Day is it
-          </button>
+        <Link id="dayAdd" to={"/add-day"}>
+          <button type="button">What Day is it</button>
         </Link>
         <h2>food journal</h2>
 
@@ -45,13 +44,12 @@ export default class MealMain extends Component {
           {days.map((day) => (
             <li key={day.id}>
               <Days {...day} />
-           
-                      <button type='delete' onClick={this.handleDeleteFood}>delete</button>
+              <button onClick={() => this.handleDeleteFood(day.id)}>
+                delete
+              </button>
             </li>
           ))}
-
         </ul>
-       
       </section>
     );
   }
