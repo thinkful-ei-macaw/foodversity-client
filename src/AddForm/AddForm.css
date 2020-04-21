@@ -1,9 +1,32 @@
+section.AddFood {
+  background-image: url("/images/frank-zhang-ST-Ts25_TpE-unsplash.jpg");
+  min-height: 100vh;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+h2 {
+  color: white;
+}
 fieldset {
-    margin-top: 100px;
-    margin-left: 300px;
-    margin-right: 300px;
-    padding: 50px;
-    border-style: double;
-    opacity: .7;
-    background-image: url('/public/images/tomatoes-red-salad-food-fresh-vegetable-healthy-vitamins-nutrition.jpg');
+  margin-top: 100px;
+  margin-left: 300px;
+  margin-right: 300px;
+  padding: 50px;
+  border-style: double;
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+input {
+  margin: 10px;
+  text-align: left;
+}
+
+select#food-day-select {
+  padding: 20px;
 }

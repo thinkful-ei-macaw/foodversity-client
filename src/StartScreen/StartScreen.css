@@ -15,7 +15,7 @@ div.StartScreen {
   bottom: 25px;
   color: white;
   padding: 25px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 button {
@@ -26,6 +26,11 @@ button {
   color: #fff;
   background: #111;
   border-radius: remy(35px);
+  margin: 5px;
+}
+button:hover {
+  background-color: grey;
+  cursor: pointer;
 }
 
 .StartScreen h1 {

@@ -1,0 +1,23 @@
+div.Info {
+  background-image: url("/images/william-felker-fqkrXYMosT4-unsplash.jpg");
+  min-height: 100vh;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  align-items: center;
+}
+
+.info-wrapper {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  right: 25px;
+  bottom: 25px;
+  color: white;
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+}

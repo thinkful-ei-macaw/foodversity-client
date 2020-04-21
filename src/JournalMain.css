@@ -1,3 +1,82 @@
 li {
-    list-style: none;
+  list-style: none;
 }
+
+button#delete {
+  background-color: white;
+  color: grey;
+  text-align: center;
+  margin-top: 50px;
+  color: #20bf6b !important;
+  text-transform: uppercase;
+  background: #ffffff;
+  border: 4px solid #20bf6b !important;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  align-items: flex-start;
+}
+button#delete:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  color: #494949 !important;
+  border-radius: 50px;
+  border-color: #494949 !important;
+  transition: all 0.3s ease 0s;
+}
+/* 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  content: "";
+  display: block;
+  position: absolute;
+} */
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: gainsboro;
+}
+
+.half-transparent {
+  color: rgba(#fff, 0.3);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+ul.calendar {
+  padding-inline-end: 10px;
+  padding-inline-start: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+li {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1vmin;
+}
+
+/* day {
+  font-size: 1.4vmin;
+  display: inline-block;
+}
+
+month {
+  display: block;
+  color: rgba(#fff, 0.8);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2vmin;
+  position: relative;
+} */

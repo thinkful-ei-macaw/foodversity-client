@@ -13,11 +13,12 @@ ul.calendar {
   min-width: 150px;
   margin: 0;
   border: 1px solid black;
-  word-break: break-all;
+  /* word-break: break-all; */
   padding: 10px;
   box-sizing: border-box;
   min-height: 150px;
   text-align: left;
+  /* border-style: none; */
 }
 
 h3.day__title {
@@ -37,5 +38,3 @@ h3.day__title {
 .day li {
   margin: 5px 0;
 }
-
-

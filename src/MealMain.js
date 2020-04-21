@@ -44,7 +44,7 @@ export default class MealMain extends Component {
           {days.map((day) => (
             <li key={day.id}>
               <Days {...day} />
-              <button onClick={() => this.handleDeleteFood(day.id)}>
+              <button id="delete" onClick={() => this.handleDeleteFood(day.id)}>
                 delete
               </button>
             </li>
