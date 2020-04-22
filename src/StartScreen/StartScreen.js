@@ -13,7 +13,9 @@ function StartScreen(props) {
           <button type="button">Start</button>
         </Link>
         <Link id="info" to="/info">
-          <button type="button">Info</button>
+          <button type="button" id="info">
+            Info
+          </button>
         </Link>
       </div>
     </div>

@@ -1,5 +1,5 @@
 div.StartScreen {
-  background-image: url("/images/vegetables-vegetable-basket-harvest-garden-salad-eat-healthy-fresh-cultivation.jpg");
+  background-image: url("/images/ella-olsson-I-uYa5P-EgM-unsplash.jpg");
   min-height: 100vh;
   padding: 20px;
   background-repeat: no-repeat;
@@ -28,9 +28,14 @@ button {
   border-radius: remy(35px);
   margin: 5px;
 }
-button:hover {
+button:hover,
+button#info:hover {
   background-color: grey;
   cursor: pointer;
+}
+
+button#info {
+  background-color: seagreen;
 }
 
 .StartScreen h1 {

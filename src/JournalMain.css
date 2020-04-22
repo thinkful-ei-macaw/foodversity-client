@@ -5,7 +5,7 @@ li {
 button#delete {
   background-color: white;
   color: grey;
-  /* margin-top: 50px; */
+  margin-top: 50px;
   color: #20bf6b !important;
   text-transform: uppercase;
   background: #ffffff;
@@ -13,10 +13,7 @@ button#delete {
   border-radius: 6px;
   display: inline-block;
   transition: all 0.3s ease 0s;
-  align-items: flex-start;
   height: 2.5em;
-  width: 3.5em;
-  margin: auto;
 }
 button#delete:hover {
   cursor: pointer;
@@ -45,7 +42,6 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-color: gainsboro;
 }
 
 .half-transparent {
@@ -68,17 +64,3 @@ li {
   flex-wrap: wrap;
   margin-top: 1vmin;
 }
-
-/* day {
-  font-size: 1.4vmin;
-  display: inline-block;
-}
-
-month {
-  display: block;
-  color: rgba(#fff, 0.8);
-  text-transform: uppercase;
-  text-align: center;
-  padding: 2vmin;
-  position: relative;
-} */

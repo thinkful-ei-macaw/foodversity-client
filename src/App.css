@@ -19,15 +19,44 @@ ul.calendar {
   min-height: 150px;
   text-align: left;
   /* border-style: none; */
+  display: block;
+  padding: 2vmin;
+  position: relative;
+}
+
+li:nth-child(4n + 1) {
+  background-color: blue;
+}
+li:nth-child(4n + 2) {
+  background: orange;
+}
+li:nth-child(4n + 3) {
+  background: yellow;
+}
+li:nth-child(4n + 4) {
+  background: red;
+}
+
+li#days {
+  background: none;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+div.day {
+  color: white;
+  text-decoration: none;
 }
 
 h3.day__title {
   margin-top: 0;
+  font-weight: bold;
+  font-size: 2.5vmin;
 }
 
 .day__title a {
   text-decoration: none;
-  color: blue;
+  color: white;
 }
 
 .day ul {
@@ -37,4 +66,15 @@ h3.day__title {
 
 .day li {
   margin: 5px 0;
+}
+
+.day {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1vmin;
+}
+
+.day {
+  font-size: 2vmin;
+  display: inline-block;
 }

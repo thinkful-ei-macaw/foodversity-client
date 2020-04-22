@@ -19,7 +19,9 @@ export default class Days extends React.Component {
           {foods
             .filter((f) => f.days_id === parseInt(id))
             .map((f) => (
-              <li key={f.id}>{f.content}</li>
+              <li id="days" key={f.id}>
+                {f.content}
+              </li>
             ))}
         </ul>
       </div>
