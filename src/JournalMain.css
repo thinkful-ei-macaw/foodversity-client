@@ -23,19 +23,6 @@ button#delete:hover {
   border-color: #494949 !important;
   transition: all 0.3s ease 0s;
 }
-/* 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-*::before,
-*::after {
-  content: "";
-  display: block;
-  position: absolute;
-} */
 
 body {
   min-height: 100vh;
