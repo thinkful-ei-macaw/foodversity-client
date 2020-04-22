@@ -8,33 +8,38 @@ ul.calendar {
   flex-wrap: wrap;
 }
 
+h2#journal {
+  color: #1a2426;
+  font-weight: 900;
+}
+
 .calendar > li {
-  width: 14%;
+  width: 25%;
   min-width: 150px;
   margin: 0;
-  border: 1px solid black;
+  border: 1px solid #1a2426;
   /* word-break: break-all; */
   padding: 10px;
   box-sizing: border-box;
   min-height: 150px;
   text-align: left;
-  /* border-style: none; */
+  border-style: none;
   display: block;
   padding: 2vmin;
   position: relative;
 }
 
 li:nth-child(4n + 1) {
-  background-color: blue;
+  background: #59181e;
 }
 li:nth-child(4n + 2) {
-  background: orange;
+  background: #8c2c16;
 }
 li:nth-child(4n + 3) {
-  background: yellow;
+  background: #a6530a;
 }
 li:nth-child(4n + 4) {
-  background: red;
+  background: #5a8c83;
 }
 
 li#days {

@@ -1,4 +1,4 @@
-section.AddFood {
+section.addDay {
   background-image: url("/images/annie-spratt-l9oA-MIbUvc-unsplash.jpg");
   min-height: 100vh;
   padding: 20px;
@@ -22,9 +22,15 @@ fieldset {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-input {
+input#food-day-id {
   margin: 10px;
-  text-align: left;
+  text-align: center;
+  width: 400px;
+  height: 50px;
+}
+
+label {
+  font-size: 20px;
 }
 
 select#food-day-select {

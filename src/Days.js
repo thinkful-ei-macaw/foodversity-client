@@ -1,5 +1,6 @@
 import React from "react";
 import FoodversityContext from "./FoodversityContext";
+// import { Link } from "react-router-dom";
 
 export default class Days extends React.Component {
   static defaultProps = {
@@ -20,7 +21,17 @@ export default class Days extends React.Component {
             .filter((f) => f.days_id === parseInt(id))
             .map((f) => (
               <li id="days" key={f.id}>
+                {f.meal_type}:<br />
                 {f.content}
+                <br />
+                {f.second_item}
+                <br />
+                {f.third_item}
+                <br />
+                recipe link:
+                <a target="_blank" href={f.url}>
+                  {f.url}
+                </a>
               </li>
             ))}
         </ul>

@@ -38,7 +38,7 @@ export default class MealMain extends Component {
         <Link id="dayAdd" to={"/add-day"}>
           <button type="button">What Day is it</button>
         </Link>
-        <h2>food journal</h2>
+        <h2 id="journal">food journal</h2>
 
         <ul className="calendar">
           {days.map((day) => (

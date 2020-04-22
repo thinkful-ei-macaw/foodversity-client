@@ -30,6 +30,7 @@ class App extends Component {
       })
       .then(([days, foods]) => {
         console.log(days);
+        console.log(foods);
         this.setState({ days, foods });
       })
       .catch((error) => {

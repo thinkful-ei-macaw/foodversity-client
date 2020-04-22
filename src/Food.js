@@ -33,12 +33,14 @@ export default class Food extends React.Component {
     const { name, id, days_id } = this.props;
     return (
       <div className="food">
-        <p className="food__title" value={`/food/${id}`}>{name}{days_id}
-          
+        <p className="food__title" value={`/food/${id}`}>
+          {name}
+          {days_id}
         </p>
         <button
           className="food__delete"
           type="button"
+          id="deleteme"
           onClick={this.handleClickDelete}
         >
           delete

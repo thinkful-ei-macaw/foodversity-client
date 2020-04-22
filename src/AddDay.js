@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FoodversityContext from "./FoodversityContext";
 import config from "./config";
+import "./AddDay.css";
 
 class AddDay extends Component {
   static defaultProps = {
@@ -39,25 +40,22 @@ class AddDay extends Component {
   render() {
     return (
       <section className="addDay">
-        <h2>Add day</h2>
+        <h2>add day</h2>
         <form onSubmit={this.handleSubmit}>
           <fieldset>
-          <label htmlFor="day-name">what day is it</label>
-          <input type="date" name="title" id="food-day-id" required />
+            <label htmlFor="day-name">what day is it</label>
+            <input type="date" name="title" id="food-day-id" required />
 
-          <div className="button">
-            <button type="submit" >
-              Add day
-            </button>
-            <button
-              id="cancel add"
-              onClick={(e) => this.props.history.replace("/main")}
-            >
-              nevermind...
-            </button>
-          </div>
+            <div className="button"></div>
           </fieldset>
+          <button type="submit">Add day</button>
         </form>
+        <button
+          id="cancel add"
+          onClick={(e) => this.props.history.replace("/main")}
+        >
+          nevermind...
+        </button>
       </section>
     );
   }

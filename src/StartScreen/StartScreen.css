@@ -23,19 +23,19 @@ button {
   font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #fff;
-  background: #111;
+  color: #b8d0d9;
+  background: #1a2426;
   border-radius: remy(35px);
   margin: 5px;
 }
 button:hover,
 button#info:hover {
-  background-color: grey;
+  background-color: #a6948d;
   cursor: pointer;
 }
 
 button#info {
-  background-color: seagreen;
+  background-color: #5a8c83;
 }
 
 .StartScreen h1 {
