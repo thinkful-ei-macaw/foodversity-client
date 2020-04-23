@@ -4,7 +4,7 @@ https://foodversity-client.now.sh
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). FOR USER STORIES AND APP FLOW, SEE BELOW
 
-![Image description](https://imgur.com/0Ih9puJ)
+![App screenshot](https://imgur.com/X3yBP95)
 
 ### `npm test`
 

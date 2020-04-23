@@ -14,7 +14,8 @@ export default class Days extends React.Component {
     return (
       <div className="day">
         <h3 className="day__title">
-          <a href={`/days/${id}`}>{title}</a>
+          {title}
+          {/* <a href={`/days/${id}`}>{title}</a> */}
         </h3>
         <ul>
           {foods

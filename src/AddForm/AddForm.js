@@ -21,6 +21,7 @@ class AddForm extends Component {
       second_item: e.target["second-item"].value,
       third_item: e.target["third-item"].value,
       url: e.target["url"].value,
+      modified: new Date().getTime(),
     };
     fetch(`${config.API_ENDPOINT}/food`, {
       method: "POST",
