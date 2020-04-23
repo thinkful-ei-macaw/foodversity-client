@@ -1,5 +1,5 @@
 section.addDay {
-  background-image: url("/images/annie-spratt-l9oA-MIbUvc-unsplash.jpg");
+  background-image: url("/images/annie-spratt-l9oA-MIbUvc-unsplash (1).jpg");
   min-height: 100vh;
   padding: 20px;
   background-repeat: no-repeat;
@@ -17,7 +17,6 @@ fieldset#day-form {
   padding: 50px;
   border-style: double;
   float: left;
-
   color: white;
   background-color: rgba(191, 178, 170, 0.8);
   border-color: #365939;
