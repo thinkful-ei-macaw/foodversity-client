@@ -18,11 +18,16 @@ button#delete {
 }
 button#delete:hover {
   cursor: pointer;
-  opacity: 0.5;
   color: #1a2426 !important;
   border-radius: 50px;
   border-color: #594916 !important;
   transition: all 0.3s ease 0s;
+}
+
+div.journal-wrapper {
+  background-image: url("/images/ella-olsson-I-uYa5P-EgM-unsplash.jpg");
+  background-size: cover;
+  opacity: 0.9;
 }
 
 body {

@@ -32,24 +32,30 @@ export default class MealMain extends Component {
 
     return (
       <section className="JournalMain">
-        <Link id="start" to="/addform">
-          <button type="button">Add All The Foods!</button>
-        </Link>
-        <Link id="dayAdd" to={"/add-day"}>
-          <button type="button">What Day is it</button>
-        </Link>
-        <h2 id="journal">food journal</h2>
+        <div className="journal-wrapper">
+          <Link id="dayAdd" to={"/add-day"}>
+            <button type="button">Add Day Of The Week</button>
+          </Link>
+          <Link id="start" to="/addform">
+            <button type="button">Add All The Foods!</button>
+          </Link>
 
-        <ul className="calendar">
-          {days.map((day) => (
-            <li key={day.id}>
-              <Days {...day} />
-              <button id="delete" onClick={() => this.handleDeleteFood(day.id)}>
-                delete
-              </button>
-            </li>
-          ))}
-        </ul>
+          <h2 id="journal">food journal</h2>
+
+          <ul className="calendar">
+            {days.map((day) => (
+              <li key={day.id}>
+                <Days {...day} />
+                <button
+                  id="delete"
+                  onClick={() => this.handleDeleteFood(day.id)}
+                >
+                  delete
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     );
   }

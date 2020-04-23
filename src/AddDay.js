@@ -41,8 +41,8 @@ class AddDay extends Component {
     return (
       <section className="addDay">
         <h2>add day</h2>
-        <form onSubmit={this.handleSubmit}>
-          <fieldset>
+        <form id="day-form" onSubmit={this.handleSubmit}>
+          <fieldset id="day-form">
             <label htmlFor="day-name">what day is it</label>
             <input type="date" name="title" id="food-day-id" required />
 

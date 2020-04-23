@@ -6,11 +6,13 @@ ul.calendar {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  opacity: 0.85;
 }
 
 h2#journal {
-  color: #1a2426;
+  color: white;
   font-weight: 900;
+  font-size: 40px;
 }
 
 .calendar > li {
@@ -18,7 +20,7 @@ h2#journal {
   min-width: 150px;
   margin: 0;
   border: 1px solid #1a2426;
-  /* word-break: break-all; */
+  word-break: break-all;
   padding: 10px;
   box-sizing: border-box;
   min-height: 150px;
@@ -27,6 +29,7 @@ h2#journal {
   display: block;
   padding: 2vmin;
   position: relative;
+  margin: 1px;
 }
 
 li:nth-child(4n + 1) {

@@ -6,20 +6,37 @@ section.addDay {
   background-position: center;
   background-size: cover;
   position: relative;
+  align-items: center;
 }
 
 h2 {
   color: white;
 }
-fieldset {
-  margin-top: 100px;
-  margin-left: 300px;
-  margin-right: 300px;
+
+fieldset#day-form {
   padding: 50px;
   border-style: double;
+  float: left;
 
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(191, 178, 170, 0.8);
+  border-color: #365939;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 992px) {
+  fieldset {
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 50px;
+    border-style: double;
+    align-items: center;
+    color: white;
+    background-color: rgba(191, 178, 170, 0.8);
+    border-color: #365939;
+    font-weight: 500;
+  }
 }
 
 input#food-day-id {
@@ -31,8 +48,4 @@ input#food-day-id {
 
 label {
   font-size: 20px;
-}
-
-select#food-day-select {
-  padding: 20px;
 }
