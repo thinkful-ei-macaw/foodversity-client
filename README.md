@@ -75,6 +75,7 @@ What this app does:
   - enter at least one food item to add (all other fields are optional)
   - click on Add Meal to add your selections to the calendar!
 - You can click Nevermind at any time to go back to the previous page
+- DELETE removes the entire day with all entries (at the moment). Future updates will include an option to EDIT and delete individual items ;)
 
 - Log out of account takes the user back to the start screen
 
