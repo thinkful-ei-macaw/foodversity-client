@@ -1,0 +1,43 @@
+form.RegistrationForm {
+  background-image: url("/images/william-felker-fqkrXYMosT4-unsplash (1).jpg");
+  min-height: 100vh;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+}
+label {
+  color: white;
+  font-weight: 800;
+}
+
+h3 {
+  color: white;
+}
+
+div.reg-wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+  padding: 50px;
+}
+
+fieldset#logging {
+  padding-top: 15px;
+}
+#LoginForm__user_name,
+#LoginForm__password {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 992px) {
+  fieldset#logging {
+    padding: 50px;
+    border-style: double;
+    color: white;
+    background-color: rgba(191, 178, 170, 0.8);
+    border-color: #365939;
+    font-weight: 500;
+  }
+}

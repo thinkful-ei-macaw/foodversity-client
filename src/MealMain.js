@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "./JournalMain.css";
 import config from "./config";
 import TokenService from "./services/token-service";
+import Footer from "./Footer";
 
 export default class MealMain extends Component {
   static defaultProps = {
@@ -57,6 +58,7 @@ export default class MealMain extends Component {
               </li>
             ))}
           </ul>
+          <Footer />
         </div>
       </section>
     );

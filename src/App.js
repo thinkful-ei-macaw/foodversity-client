@@ -11,6 +11,7 @@ import Info from "./Info";
 import { Route } from "react-router-dom";
 import PrivateRoute from "./Utils/PrivateRoute";
 import PublicOnlyRoute from "./Utils/PublicOnlyRoute";
+import Register from "./Registration";
 
 class App extends Component {
   state = {
@@ -78,6 +79,7 @@ class App extends Component {
           <PublicOnlyRoute exact path="/info" component={Info} />
           <PrivateRoute exact path="/main" component={MealMain} />
           <PublicOnlyRoute exact path="/login" component={LoginPage} />
+          <PublicOnlyRoute exact path="/register" component={Register} />
           <PrivateRoute exact path="/addform" component={AddForm} />
           <PrivateRoute path="/add-day" component={AddDay} />
         </div>

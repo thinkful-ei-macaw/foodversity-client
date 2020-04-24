@@ -4,6 +4,7 @@ import TokenService from "../services/token-service";
 import AuthApiService from "../services/auth-api-service";
 import { Link } from "react-router-dom";
 import { Button, Input } from "../Utils/Utils";
+import Footer from "../Footer";
 
 class LoginForm extends Component {
   static defaultProps = {
@@ -78,6 +79,7 @@ class LoginForm extends Component {
             </Link>
           </form>
         </div>
+        <Footer />
       </section>
     );
   }
