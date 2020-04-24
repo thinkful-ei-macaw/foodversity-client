@@ -4,7 +4,7 @@ https://foodversity-client.now.sh
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). FOR USER STORIES AND APP FLOW, SEE BELOW
 
-![App screenshot](https://imgur.com/X3yBP95)
+![App screenshot](https://github.com/damnDasha/foodversity-client/blob/master/public/images/Screen%20Shot%202020-04-23%20at%2012.01.16%20PM.png)
 
 ### `npm test`
 
@@ -61,6 +61,22 @@ What this app does:
 - Create meals for breakfast, lunch, dinner, and snacks
 - Edit the already added meals and change things around
 - Able to compile a week long meal plan, making sure you don't run out of ingredients
+
+### How To Use Foodversity
+
+- On start up screen, click Info to learn more about the app
+- Click on 'Get Started' to be taken to the log in page
+- Log in with demo credentials: user: demo pw: D3m0!1234
+- Arrive on main page!
+- Click on Add Day of the week to add a new day to appear in the calendar
+- Click on Add Food to open the food form.
+  - from here: select day from the drop down menu to choose what day you're adding to
+  - enter meal type(breakfast, snack, etc.)
+  - enter at least one food item to add (all other fields are optional)
+  - click on Add Meal to add your selections to the calendar!
+- You can click Nevermind at any time to go back to the previous page
+
+- Log out of account takes the user back to the start screen
 
 New Users:
 

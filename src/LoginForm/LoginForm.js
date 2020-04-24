@@ -34,8 +34,6 @@ class LoginForm extends Component {
   };
 
   render() {
-    const { error } = this.state;
-
     return (
       <section id="log-in">
         <div className="login-wrapper">

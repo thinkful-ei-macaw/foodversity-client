@@ -13,10 +13,7 @@ export default class Days extends React.Component {
     const { foods } = this.context;
     return (
       <div className="day">
-        <h3 className="day__title">
-          {title}
-          {/* <a href={`/days/${id}`}>{title}</a> */}
-        </h3>
+        <h3 className="day__title">{title}</h3>
         <ul>
           {foods
             .filter((f) => f.days_id === parseInt(id))
@@ -30,7 +27,12 @@ export default class Days extends React.Component {
                 {f.third_item}
                 <br />
                 recipe link:
-                <a id="food-url" target="_blank" href={f.url}>
+                <a
+                  id="food-url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={f.url}
+                >
                   {f.url}
                 </a>
               </li>

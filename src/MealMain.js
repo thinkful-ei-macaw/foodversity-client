@@ -26,11 +26,9 @@ export default class MealMain extends Component {
     }).then(() => {
       this.context.deleteDay(id);
     });
-    //this.props.history.push(`/main`);
   };
 
   render() {
-    const { foods = [] } = this.context;
     const { days = [] } = this.context;
 
     return (

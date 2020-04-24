@@ -50,6 +50,13 @@ div.journal-wrapper {
   background-image: url("/images/ella-olsson-I-uYa5P-EgM-unsplash (1).jpg");
   background-size: cover;
   opacity: 0.9;
+  min-height: 100vh;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  align-items: center;
 }
 
 body {

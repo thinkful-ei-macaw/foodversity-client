@@ -8,7 +8,6 @@ import FoodversityContext from "./FoodversityContext";
 import config from "./config";
 import AddDay from "./AddDay";
 import Info from "./Info";
-import { Route } from "react-router-dom";
 import PrivateRoute from "./Utils/PrivateRoute";
 import PublicOnlyRoute from "./Utils/PublicOnlyRoute";
 import Register from "./Registration";
