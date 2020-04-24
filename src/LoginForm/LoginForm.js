@@ -68,15 +68,15 @@ class LoginForm extends Component {
                 required
               ></Input>
             </fieldset>
+            <br />
+            <Button id="login" type="submit">
+              Login
+            </Button>{" "}
+            <br />
+            <Link id="cancel" to={"/"}>
+              <button type="button">Cancel</button>
+            </Link>
           </form>
-          <br />
-          <Button id="login" type="submit">
-            Login
-          </Button>{" "}
-          <br />
-          <Link id="cancel" to={"/"}>
-            <button type="button">Cancel</button>
-          </Link>
         </div>
       </section>
     );
