@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![App screenshot](https://github.com/damnDasha/foodversity-client/blob/master/public/images/Screen%20Shot%202020-04-23%20at%2012.01.16%20PM.png)
 
+![homescreen](https://github.com/damnDasha/foodversity-client/blob/master/public/images/Screen%20Shot%202020-04-23%20at%209.07.36%20AM.png)
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />

@@ -11,7 +11,10 @@ export default class RegistrationForm extends Component {
   state = { error: null };
   handleSubmit = (ev) => {
     ev.preventDefault();
-    const { full_name, nick_name, user_name, password } = ev.target;
+    const full_name = ev.target[0];
+    const user_name = ev.target[1];
+    const password = ev.target[3];
+    const nick_name = ev.target[4];
 
     this.setState({ error: null });
     AuthApiService.postUser({
@@ -25,7 +28,7 @@ export default class RegistrationForm extends Component {
         nick_name.value = "";
         user_name.value = "";
         password.value = "";
-        this.props.onRegistrationSuccess();
+        this.props.onRegistrationSuccess(user);
       })
       .catch((res) => {
         this.setState({ error: res.error });
