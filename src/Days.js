@@ -30,7 +30,7 @@ export default class Days extends React.Component {
                 {f.third_item}
                 <br />
                 recipe link:
-                <a target="_blank" href={f.url}>
+                <a id="food-url" target="_blank" href={f.url}>
                   {f.url}
                 </a>
               </li>

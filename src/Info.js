@@ -18,8 +18,8 @@ function Info() {
           you eat, so you never have to be bored again!
           <br />
           <br />
-          To use the app, click on get started, and you'll be taken to the
-          calendar page. <br />
+          To use the app, click on 'get started' and you'll be taken to the main
+          page. <br />
           <br />
           Click on Add Day to add the day of the week you want to make a food
           entry for.
@@ -28,7 +28,7 @@ function Info() {
           eat to that particular day!
         </p>
 
-        <Link id="start" to="/main">
+        <Link id="start" to="/login">
           <button type="button">get started!</button>
         </Link>
       </div>

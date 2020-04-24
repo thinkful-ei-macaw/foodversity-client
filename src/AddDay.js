@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FoodversityContext from "./FoodversityContext";
 import config from "./config";
 import "./AddDay.css";
+import TokenService from "./services/token-service";
 
 class AddDay extends Component {
   static defaultProps = {
@@ -20,6 +21,7 @@ class AddDay extends Component {
       method: "POST",
       headers: {
         "content-type": "application/json",
+        Authorization: `Bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify(newDay),
     })

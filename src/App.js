@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
 import "./App.css";
 import StartScreen from "./StartScreen/StartScreen";
 import MealMain from "./MealMain";
-import LoginForm from "./LoginForm/LoginForm";
+import LoginPage from "./LoginForm/LoginPage";
 import AddForm from "./AddForm/AddForm";
 import FoodversityContext from "./FoodversityContext";
 import config from "./config";
 import AddDay from "./AddDay";
 import Info from "./Info";
+import PrivateRoute from "./Utils/PrivateRoute";
+import PublicOnlyRoute from "./Utils/PublicOnlyRoute";
 
 class App extends Component {
   state = {
@@ -72,12 +73,12 @@ class App extends Component {
     return (
       <FoodversityContext.Provider value={value}>
         <div className="App">
-          <Route exact path="/" component={StartScreen} />
-          <Route exact path="/info" component={Info} />
-          <Route exact path="/main" component={MealMain} />
-          <Route exact path="/login" component={LoginForm} />
-          <Route exact path="/addform" component={AddForm} />
-          <Route path="/add-day" component={AddDay} />
+          <PublicOnlyRoute exact path="/" component={StartScreen} />
+          <PublicOnlyRoute exact path="/info" component={Info} />
+          <PrivateRoute exact path="/main" component={MealMain} />
+          <PublicOnlyRoute exact path="/login" component={LoginPage} />
+          <PrivateRoute exact path="/addform" component={AddForm} />
+          <PrivateRoute path="/add-day" component={AddDay} />
         </div>
       </FoodversityContext.Provider>
     );

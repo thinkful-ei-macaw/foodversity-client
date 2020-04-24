@@ -3,6 +3,7 @@ import FoodversityContext from "../FoodversityContext";
 import config from "../config";
 import "./AddForm.css";
 import FoodForm from "../FoodForm";
+import TokenService from "../services/token-service";
 
 class AddForm extends Component {
   static defaultProps = {
@@ -27,6 +28,7 @@ class AddForm extends Component {
       method: "POST",
       headers: {
         "content-type": "application/json",
+        Authorization: `Bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify(newFood),
     })

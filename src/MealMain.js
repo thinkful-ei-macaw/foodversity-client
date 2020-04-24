@@ -4,6 +4,7 @@ import FoodversityContext from "./FoodversityContext";
 import { Link } from "react-router-dom";
 import "./JournalMain.css";
 import config from "./config";
+import TokenService from "./services/token-service";
 
 export default class MealMain extends Component {
   static defaultProps = {
@@ -19,6 +20,7 @@ export default class MealMain extends Component {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
+        Authorization: `Bearer ${TokenService.getAuthToken()}`,
       },
     }).then(() => {
       this.context.deleteDay(id);
