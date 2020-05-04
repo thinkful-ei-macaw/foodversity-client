@@ -24,15 +24,12 @@ class App extends Component {
       fetch(`${config.API_ENDPOINT}/food`),
     ])
       .then(([daysRes, foodsRes]) => {
-        console.log(this.state);
         if (!daysRes.ok) return daysRes.json().then((e) => Promise.reject(e));
         if (!foodsRes.ok) return foodsRes.json().then((e) => Promise.reject(e));
 
         return Promise.all([daysRes.json(), foodsRes.json()]);
       })
       .then(([days, foods]) => {
-        console.log(days);
-        console.log(foods);
         this.setState({ days, foods });
       })
       .catch((error) => {

@@ -16,7 +16,6 @@ export default class MealMain extends Component {
   static contextType = FoodversityContext;
 
   handleDeleteFood = (id) => {
-    console.log("delete");
     fetch(`${config.API_ENDPOINT}/days/${id}`, {
       method: "DELETE",
       headers: {
